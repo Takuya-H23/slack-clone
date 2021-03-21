@@ -1,10 +1,10 @@
 //@ts-nocheck
 import { Db, MongoClient } from 'mongodb'
 
-global.mongo = global.mongo = {}
+global.mongo = global.mongo || {}
 
-export const coonectToDb = async () => {
-  if (!global.mongo) {
+export const connectToDb = async () => {
+  if (!global.mongo.client) {
     const client = new MongoClient(process.env.DATABASE_URL, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
@@ -12,11 +12,11 @@ export const coonectToDb = async () => {
       connectTimeoutMS: 10000
     })
 
+    global.mongo.client = client
+
     console.log('connecting to DB')
     await global.mongo.client.connect()
     console.log('connected to DB')
-
-    global.mongo.client = client
   }
 
   const db: Db = global.mongo.client.db(process.env.DATABASE_NAME)
