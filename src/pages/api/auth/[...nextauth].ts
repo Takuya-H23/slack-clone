@@ -18,5 +18,10 @@ export default NextAuth({
   database: process.env.DATABASE_URL,
   page: {
     signIn: '/signIn'
+  },
+  callbacks: {
+    async session(session, user) {
+      return { ...session, _id: user.sub }
+    }
   }
 })

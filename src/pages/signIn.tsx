@@ -6,12 +6,12 @@ import { Button } from '@material-ui/core'
 const handleClick = (id: string) => () => signIn(id)
 
 export default function SignIn({ providers }: any) {
-  // const [session] = useSession()
-  // const { push } = useRouter()
+  const [session] = useSession()
+  const { push } = useRouter()
 
-  // React.useEffect(() => {
-  //   if (session) push('/app')
-  // }, [session])
+  React.useEffect(() => {
+    if (session) push('/app')
+  }, [session])
 
   return Object.values(providers).map(({ id, name }: any) => (
     <Button onClick={handleClick(id)} key={name} variant="contained">
