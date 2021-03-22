@@ -1,6 +1,9 @@
 //@ts-nocheck
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
+import { lensProp, over } from 'ramda'
+
+const L = { user: lensProp('user') }
 
 export default NextAuth({
   session: {
@@ -18,5 +21,10 @@ export default NextAuth({
   database: process.env.DATABASE_URL,
   page: {
     signIn: '/signIn'
+  },
+  callbacks: {
+    session(session, user) {
+      return over(L.user, x => ({ ...x, _id: user.sub }), session)
+    }
   }
 })
