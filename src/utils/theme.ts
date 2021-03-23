@@ -30,6 +30,17 @@ lightTheme.typography.h1 = {
   }
 }
 
+lightTheme.typography.h2 = {
+  fontWeight: 700,
+  fontSize: '3.5rem',
+  [lightTheme.breakpoints.down('sm')]: {
+    fontSize: '3rem'
+  },
+  [lightTheme.breakpoints.down('xs')]: {
+    fontSize: '2rem'
+  }
+}
+
 lightTheme.typography.body1 = {
   fontSize: '3.5rem',
   lineHeight: 1.333,

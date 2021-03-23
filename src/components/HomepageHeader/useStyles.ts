@@ -23,6 +23,7 @@ export default makeStyles(({ palette, spacing }) => ({
     bottom: 0,
     left: 0,
     right: 0,
+
     '& button:first-child': {
       marginBottom: spacing(2)
     }
