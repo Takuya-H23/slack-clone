@@ -7,7 +7,7 @@ export default function HomepageBanner() {
   const isGreaterThanMd = useMediaQuery('(min-width: 950px )')
 
   return (
-    <Grid container spacing={4} alignItems="center" justify="center">
+    <Grid container spacing={5} alignItems="center" justify="center">
       <Grid item md={6}>
         <Typography variant="h1" gutterBottom>
           Welcome to your new HQ
