@@ -14,6 +14,7 @@ export default function Button({
   ButtonProps
 }: Props) {
   const cls = useStyles({ disableMargin })
+
   return (
     <MaterialButton {...ButtonProps} classes={cls}>
       {children}

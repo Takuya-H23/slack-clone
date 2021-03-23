@@ -24,7 +24,7 @@ lightTheme.typography.h1 = {
   fontSize: '3.5rem',
   color: '#000000',
   [lightTheme.breakpoints.down('md')]: {
-    fontSize: '3rem'
+    fontSize: '3.5rem'
   },
   [lightTheme.breakpoints.down('sm')]: {
     fontSize: '3rem'
@@ -51,6 +51,9 @@ lightTheme.typography.h2 = {
 lightTheme.typography.body1 = {
   fontSize: '3.5rem',
   lineHeight: 1.333,
+  [lightTheme.breakpoints.down('lg')]: {
+    fontSize: '1.5rem'
+  },
   [lightTheme.breakpoints.down('md')]: {
     fontSize: '1.2rem'
   },

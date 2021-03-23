@@ -1,50 +1,30 @@
 import { Box, Typography } from '@material-ui/core'
 import { Button, PageLayout } from '../elements'
-import { HomepageHeader } from '../components'
+import { HomepageBanner, HomepageHeader } from '../components'
 
 export default function Home() {
   return (
     <Box bgcolor="background.paper">
       <HomepageHeader />
       <PageLayout>
-        <Box>
-          <Typography variant="h1" gutterBottom>
-            Welcome to your new HQ
+        <HomepageBanner />
+        <Box mt={4}>
+          <Typography variant="h2" gutterBottom>
+            A better way to communicate
           </Typography>
           <Typography paragraph>
-            Teamwork can be hard, messy, complicated… and still the best way to
-            work. That’s why we made Slack — a place where people get work done,
-            together.
+            Unlike email, conversations in Slack are easy to follow. And they're
+            more than conversations — you can make calls, share files, and even
+            connect with other apps.
           </Typography>
           <Button
             ButtonProps={{
-              variant: 'contained',
+              variant: 'outlined',
               color: 'primary',
               size: 'large',
               fullWidth: true
             }}
           >
-            TRY FOR FREE
-          </Button>
-        </Box>
-        <Box mt={4}>
-          <video autoPlay loop style={{ maxWidth: '100%', height: 'auto' }}>
-            <source
-              src="https://a.slack-edge.com/9b527/marketing/img/homepage/hp-prospect/hero/tablet/mp4/hero-image-tablet.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </Box>
-        <Box mt={4}>
-          <Typography variant="h2" gutterBottom>
-            A better way to comuunicate
-          </Typography>
-          <Typography paragraph>
-            Unlike email, conversaions in Slack are easy to follow. And they're
-            more than conversations — you can make calls, share files, and even
-            connect with other apps.
-          </Typography>
-          <Button variant="outlined" color="primary" size="large" fullWidth>
             SEE ALL FEATURES
           </Button>
         </Box>

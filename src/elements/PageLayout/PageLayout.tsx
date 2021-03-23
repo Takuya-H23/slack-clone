@@ -6,11 +6,7 @@ type Props = { children: React.ReactNode; disablePadding?: boolean }
 export default function PageLayout({ children, disablePadding }: Props) {
   const cls = useStyles({ disablePadding })
 
-  return (
-    <div className={cls.outer}>
-      <div className={cls.inner}>{children}</div>
-    </div>
-  )
+  return <div className={cls.wrapper}>{children}</div>
 }
 
 PageLayout.defaultProps = {
