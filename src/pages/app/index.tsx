@@ -27,9 +27,8 @@ export async function getServerSideProps(ctx: any) {
   const { db } = await connectToDb()
   const getUser = await db
     .collection('users')
+    //@ts-ignore
     .findOne({ _id: ObjectId(session.user._id) })
-
-  console.log(getUser)
 
   return {
     props: {

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Provider } from 'next-auth/client'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import { lightTheme } from '../utils/theme'
 import '../../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -13,7 +15,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Provider session={pageProps.session}>
-      <Component {...pageProps} />
+      <MuiThemeProvider theme={lightTheme}>
+        <Component {...pageProps} />
+      </MuiThemeProvider>
     </Provider>
   )
 }
