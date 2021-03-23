@@ -36,28 +36,16 @@ lightTheme.typography.h1 = {
 
 lightTheme.typography.h2 = {
   fontWeight: 700,
-  fontSize: '3.5rem',
-  [lightTheme.breakpoints.down('md')]: {
-    fontSize: '3rem'
-  },
-  [lightTheme.breakpoints.down('sm')]: {
+  fontSize: '2rem',
+  [lightTheme.breakpoints.up('sm')]: {
     fontSize: '2.3rem'
   },
-  [lightTheme.breakpoints.down('xs')]: {
-    fontSize: '2rem'
+  [lightTheme.breakpoints.up('md')]: {
+    fontSize: '2.8rem'
   }
 }
 
 lightTheme.typography.body1 = {
-  fontSize: '3.5rem',
-  lineHeight: 1.333,
-  [lightTheme.breakpoints.down('lg')]: {
-    fontSize: '1.5rem'
-  },
-  [lightTheme.breakpoints.down('md')]: {
-    fontSize: '1.2rem'
-  },
-  [lightTheme.breakpoints.down('sm')]: {
-    fontSize: '1.1rem'
-  }
+  fontSize: '1.1rem',
+  lineHeight: 1.333
 }
