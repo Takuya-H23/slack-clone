@@ -1,25 +1,11 @@
-import Image from 'next/image'
-import { Box, IconButton, Button, Typography } from '@material-ui/core'
-import { Menu } from '@material-ui/icons'
+import { Box, Button, Typography } from '@material-ui/core'
 import { PageLayout } from '../elements'
+import { HomepageHeader } from '../components'
 
 export default function Home() {
   return (
     <Box bgcolor="background.paper">
-      <PageLayout disablePadding>
-        <Box
-          component="header"
-          py={1.8}
-          px={1}
-          display="flex"
-          justifyContent="space-between"
-        >
-          <Image src="/slack-logo.svg" width={110} height={30} alt="slack" />
-          <IconButton>
-            <Menu />
-          </IconButton>
-        </Box>
-      </PageLayout>
+      <HomepageHeader />
       <PageLayout>
         <Typography variant="h1" gutterBottom>
           Welcome to your new HQ
