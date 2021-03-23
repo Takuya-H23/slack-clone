@@ -855,6 +855,14 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
   integrity sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==
 
+"@types/material-ui@^0.21.8":
+  version "0.21.8"
+  resolved "https://registry.yarnpkg.com/@types/material-ui/-/material-ui-0.21.8.tgz#a550778942b2e9791653aa2c4b1a35127c44cab6"
+  integrity sha512-Rsx3tRNoYkidDKfMfh+cegtOHMl73akzKnQ5pzxTrbx5oaUXLtG6YVlvtS43uebOSTDf8GQNaseB52r3zVagEg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-addons-linked-state-mixin" "*"
+
 "@types/mongodb@^3.6.10":
   version "3.6.10"
   resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.6.10.tgz#80cceaabeec9f460e5b46844e938e8eba74f9266"
@@ -899,6 +907,13 @@
   integrity sha512-od24Hng0uS1NcMSPo6ZzKXN2WJxjbF7IBzQhRCtSDyIShdEJTAWXgQlyDg998aylNrXbVvQxkFJmuaLHQcfczg==
   dependencies:
     ts-toolbelt "^6.15.1"
+
+"@types/react-addons-linked-state-mixin@*":
+  version "0.14.21"
+  resolved "https://registry.yarnpkg.com/@types/react-addons-linked-state-mixin/-/react-addons-linked-state-mixin-0.14.21.tgz#3abf296fe09d036c233ebe55f4562f3e6233af49"
+  integrity sha512-3UF7Szd3JyuU+z90kqu8L4VdDWp7SUC0eRjV2QmMEliaHODGLi5XyO5ctS50K/lG6fjC0dSAPVbvnqv0nPoGMQ==
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-transition-group@^4.2.0":
   version "4.4.1"

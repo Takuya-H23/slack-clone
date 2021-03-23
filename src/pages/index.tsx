@@ -1,5 +1,5 @@
-import { Box, Button, Typography } from '@material-ui/core'
-import { PageLayout } from '../elements'
+import { Box, Typography } from '@material-ui/core'
+import { Button, PageLayout } from '../elements'
 import { HomepageHeader } from '../components'
 
 export default function Home() {
@@ -7,17 +7,26 @@ export default function Home() {
     <Box bgcolor="background.paper">
       <HomepageHeader />
       <PageLayout>
-        <Typography variant="h1" gutterBottom>
-          Welcome to your new HQ
-        </Typography>
-        <Typography paragraph>
-          Teamwork can be hard, messy, complicated… and still the best way to
-          work. That’s why we made Slack — a place where people get work done,
-          together.
-        </Typography>
-        <Button variant="contained" color="primary" size="large" fullWidth>
-          TRY FOR FREE
-        </Button>
+        <Box>
+          <Typography variant="h1" gutterBottom>
+            Welcome to your new HQ
+          </Typography>
+          <Typography paragraph>
+            Teamwork can be hard, messy, complicated… and still the best way to
+            work. That’s why we made Slack — a place where people get work done,
+            together.
+          </Typography>
+          <Button
+            ButtonProps={{
+              variant: 'contained',
+              color: 'primary',
+              size: 'large',
+              fullWidth: true
+            }}
+          >
+            TRY FOR FREE
+          </Button>
+        </Box>
         <Box mt={4}>
           <video autoPlay loop style={{ maxWidth: '100%', height: 'auto' }}>
             <source

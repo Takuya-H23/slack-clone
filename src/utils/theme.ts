@@ -22,6 +22,10 @@ export const lightTheme = createMuiTheme({
 lightTheme.typography.h1 = {
   fontWeight: 700,
   fontSize: '3.5rem',
+  color: '#000000',
+  [lightTheme.breakpoints.down('md')]: {
+    fontSize: '3rem'
+  },
   [lightTheme.breakpoints.down('sm')]: {
     fontSize: '3rem'
   },
@@ -33,8 +37,11 @@ lightTheme.typography.h1 = {
 lightTheme.typography.h2 = {
   fontWeight: 700,
   fontSize: '3.5rem',
-  [lightTheme.breakpoints.down('sm')]: {
+  [lightTheme.breakpoints.down('md')]: {
     fontSize: '3rem'
+  },
+  [lightTheme.breakpoints.down('sm')]: {
+    fontSize: '2.3rem'
   },
   [lightTheme.breakpoints.down('xs')]: {
     fontSize: '2rem'
@@ -44,10 +51,10 @@ lightTheme.typography.h2 = {
 lightTheme.typography.body1 = {
   fontSize: '3.5rem',
   lineHeight: 1.333,
-  [lightTheme.breakpoints.down('sm')]: {
-    fontSize: '3rem'
+  [lightTheme.breakpoints.down('md')]: {
+    fontSize: '1.2rem'
   },
-  [lightTheme.breakpoints.down('xs')]: {
+  [lightTheme.breakpoints.down('sm')]: {
     fontSize: '1.1rem'
   }
 }
