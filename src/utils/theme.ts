@@ -9,6 +9,34 @@ export const lightTheme = createMuiTheme({
     background: {
       default: '#4a154b',
       paper: '#f6efe8'
+    },
+    primary: {
+      main: '#4a154b'
     }
+  },
+  typography: {
+    fontFamily: 'Arimo'
   }
 })
+
+lightTheme.typography.h1 = {
+  fontWeight: 700,
+  fontSize: '3.5rem',
+  [lightTheme.breakpoints.down('sm')]: {
+    fontSize: '3rem'
+  },
+  [lightTheme.breakpoints.down('xs')]: {
+    fontSize: '2.5rem'
+  }
+}
+
+lightTheme.typography.body1 = {
+  fontSize: '3.5rem',
+  lineHeight: 1.333,
+  [lightTheme.breakpoints.down('sm')]: {
+    fontSize: '3rem'
+  },
+  [lightTheme.breakpoints.down('xs')]: {
+    fontSize: '1.1rem'
+  }
+}
