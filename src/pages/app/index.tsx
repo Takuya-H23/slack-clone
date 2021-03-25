@@ -24,11 +24,13 @@ export async function getServerSideProps(ctx: any) {
   const session = await getSession(ctx)
   if (!session) return { props: { session } }
 
-  const { db } = await connectToDb()
-  const getUser = await db
-    .collection('users')
-    //@ts-ignore
-    .findOne({ _id: ObjectId(session.user._id) })
+  console.log(session)
+
+  const client = await connectToDb()
+
+  const query = 'SELECT * FROM users'
+
+  const res = await client.query(query)
 
   return {
     props: {

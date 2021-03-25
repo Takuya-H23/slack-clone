@@ -1,25 +1,19 @@
 //@ts-nocheck
-import { Db, MongoClient } from 'mongodb'
+import { Client } from 'pg'
 
-global.mongo = global.mongo || {}
+global.postgres = global.postgres || {}
 
 export const connectToDb = async () => {
-  if (!global.mongo.client) {
-    const client = new MongoClient(process.env.DATABASE_URL, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      bufferMaxEntries: 0,
-      connectTimeoutMS: 10000
+  if (!global.postgres.client) {
+    console.log('hit')
+    const client = new Client({
+      connectionString: 'postgresql://postgres:@localhost:5432/postgres'
     })
 
-    global.mongo.client = client
+    global.postgres.client = client
 
-    console.log('connecting to DB')
-    await global.mongo.client.connect()
-    console.log('connected to DB')
+    global.postgres.client.connect()
   }
 
-  const db: Db = global.mongo.client.db(process.env.DATABASE_NAME)
-
-  return { db, dbClient: global.mongo.client }
+  return global.postgres.client
 }
