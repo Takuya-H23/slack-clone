@@ -46,6 +46,6 @@ lightTheme.typography.h2 = {
 }
 
 lightTheme.typography.body1 = {
-  fontSize: '1.1rem',
+  fontSize: '1rem',
   lineHeight: 1.333
 }
