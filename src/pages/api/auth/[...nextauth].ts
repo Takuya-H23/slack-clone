@@ -18,7 +18,7 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_SECRET
     })
   ],
-  database: process.env.DB_CONNECTION_STRING,
+  database: process.env.DATABASE_CONNECTION_STRING,
   page: {
     signIn: '/signIn'
   },

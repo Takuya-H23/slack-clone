@@ -5,9 +5,8 @@ global.postgres = global.postgres || {}
 
 export const connectToDb = async () => {
   if (!global.postgres.client) {
-    console.log('hit')
     const client = new Client({
-      connectionString: 'postgresql://postgres:@localhost:5432/postgres'
+      connectionString: process.env.DATABASE_URL
     })
 
     global.postgres.client = client
