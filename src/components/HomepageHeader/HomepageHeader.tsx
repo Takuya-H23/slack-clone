@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core'
 import { Menu, Close } from '@material-ui/icons'
 import { PageLayout } from '../../elements'
-import useSytles from './useStyles'
+import useStyles from './useStyles'
 
 const urls = [
   { label: 'Product', url: '/' },
@@ -24,7 +24,7 @@ const urls = [
 
 export default function HomepageHeader() {
   const [isOpen, setIsOpen] = React.useState(false)
-  const cls = useSytles()
+  const cls = useStyles()
   const open = () => setIsOpen(true)
   const close = () => setIsOpen(false)
 

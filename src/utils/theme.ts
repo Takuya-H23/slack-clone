@@ -4,19 +4,24 @@ export const lightTheme = createMuiTheme({
   palette: {
     text: {
       primary: '#1d1d1d',
-      secondary: '#ffffff'
+      secondary: '#ffffff',
+      hint: '#cfc3cf'
     },
     background: {
       default: '#ffffff',
       paper: '#f6efe8'
     },
     primary: {
-      main: '#4a154b'
-    }
+      main: '#4a154b',
+      dark: '#3F0E40'
+    },
+    divider: '#cfc3cf'
   },
   typography: {
     fontFamily: 'Arimo'
-  }
+  },
+  //@ts-ignore
+  shadows: ['none', 'inset -1px 0 0 0 rgb(82 38 83)']
 })
 
 lightTheme.typography.h1 = {
@@ -46,6 +51,6 @@ lightTheme.typography.h2 = {
 }
 
 lightTheme.typography.body1 = {
-  fontSize: '1.1rem',
+  fontSize: '1rem',
   lineHeight: 1.333
 }

@@ -6,17 +6,19 @@ type Props = {
   children: React.ReactNode
   ButtonProps?: { [key: string]: any }
   disableMargin?: boolean
+  onClick?: () => void
 }
 
 export default function Button({
   children,
   disableMargin,
-  ButtonProps
+  ButtonProps,
+  onClick
 }: Props) {
   const cls = useStyles({ disableMargin })
 
   return (
-    <MaterialButton {...ButtonProps} classes={cls}>
+    <MaterialButton {...ButtonProps} onClick={onClick} classes={cls}>
       {children}
     </MaterialButton>
   )
