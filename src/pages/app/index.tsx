@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { getSession } from 'next-auth/client'
 import { connectToDb } from '../../db/connect'
+import { SlackLayout } from '../../elements'
 
 type Props = {
   session: { [key: string]: string } | null
@@ -16,13 +17,13 @@ export default function App({ session }: Props) {
     }
   }, [session])
 
-  return <div>welcome!!</div>
+  return <SlackLayout />
 }
 
 export async function getServerSideProps(ctx: any) {
   const session = await getSession(ctx)
   if (!session) return { props: { session } }
-
+  console.log(session)
   const client = await connectToDb()
 
   const query = 'SELECT * FROM users'
